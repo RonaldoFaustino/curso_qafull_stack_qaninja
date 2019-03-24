@@ -1,0 +1,16 @@
+# Ao finalizar um pedido, deve exibir para o cliente as opção para pagamento com Dinheiro, Cartão de Débito ou 
+Refeição.
+
+
+Finalizar pedido
+    Para que meu pedido seja encaminhado para a fila de preparação
+    Sendo um cliente que já adicionou um ou mais produtos no carrinho
+    Posso finalizaar o meu pedido com Cartão de Débito, dinheiro ou Refeição.
+
+    Cenário: Pagar com Dinheiro
+
+        Dado que possuo itens no meu carrinho
+        E eu já fechei o meu pedido
+        Quando eu finalizo o pedido com Dinheiro
+        Então meu pedido é concluido com a mensagem:
+        

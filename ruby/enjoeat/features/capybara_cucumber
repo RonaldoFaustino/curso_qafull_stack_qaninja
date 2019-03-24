@@ -1,0 +1,16 @@
+-- Criar pasta do Projeto
+-- Executar bundler init para iniciar um projeto Ruby.
+   Vai criar o arquivo Gemfile, onde devemos configurar nossa bibliotecas.
+-- Apos configurado o arquivo Gemfile, executar o comando bundle install, para instalar todas as dependencias.
+-- Cucumber --init para criar uma estrutura para trabalar com cucumber
+   create   features
+   create   features/step_definitions
+   create   features/support
+   create   features/support/env.rb
+-- Criar o arquivo teste.feature dentro de support e executar o comando cucumber, para criar as especificações.
+-- Agora você pode copiar os metodos que foram criado e colar dentro da pasta steps_definitions, no arquivo que ira criar como teste_steps.rb.
+-- 	 
+DocString utilizada para mensagens muito grandes 
+""" 
+Mensagem 
+"""

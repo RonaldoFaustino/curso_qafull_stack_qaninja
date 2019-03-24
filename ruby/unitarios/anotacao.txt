@@ -1,0 +1,23 @@
+// Format HTML o comando abaixo gera um relatório em html
+rspec --format html --out report.html
+
+// Relatório padrão para CI, baseado em Junit
+No arquivo GemFile, baixar a gem 'rspec_junit_formatter' e executar bundle install
+Comando para gerar relarorio Junit e rspec --format RspecJunitFormatter --out report.xml
+Comando para ver relatior no terminal rspec --format RspecJunitFormatter --out report.xml -fd
+
+//Aula de BDD Mark L link live 200
+
+Cucumber é uma ferramenta para automatizar especificações em BDD
+Comando para mostrar como é definido Cucumber
+cucumber --i18n-keywords pt
+cucumber --init para iniciar um projeto
+
+//Primeiro Script de automação com Rspec
+
+Criar a pasta do projeto, dentro da pasta criar um arquivo Gemfile e configura lo.
+Depois iniciar um projeto rspec atraves do comando rspec --init 
+Instalar o chrome driver para que o capybara consiga se comunicar web.
+Comando para executar o scripr é rspec -fd
+
+Driver default para Firefox config.default_driver = :selenium

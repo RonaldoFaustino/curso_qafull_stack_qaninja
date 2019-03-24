@@ -1,0 +1,5 @@
+-- Criar a pasta do projeto
+-- criar o arquivo Gemfile e configurar as Gems necessarias
+-- Na pasta do projeto executar o comando Bundle Install
+-- Ainda na pasta do projeto executar o comando cucumber --init para criar a estrutura do projeto
+-- Configurar o arquivo ENV.rb
