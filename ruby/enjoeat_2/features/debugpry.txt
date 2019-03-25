@@ -4,4 +4,6 @@ session=Capybara::Session.new(:selenium_chrome)
 session.visit 'http://enjoeat.herokuapp.com'
 session.find('.btn-lg').click
 
+watir
+
 
