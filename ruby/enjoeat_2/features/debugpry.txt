@@ -10,4 +10,5 @@ Cenario Outline
 Esquema de cenarios necessario passar o tipo ""
 Tabela não é necessario passar o tipo e não precisa simular varios usuarios
 
+hooks =>
 

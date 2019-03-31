@@ -18,3 +18,8 @@ Funcionalidade: Cardápio
         # Então vejo os produtos disponiveis
         # E vejo a descricao dos produtos
         # E vejo o preco dos produtos
+
+    Cenario: Carrinho vazio
+
+        Quando eu escolho um restaurante "Burger House"
+        Então vejo a seguinte mensagem no carrinho "Seu carrinho está vazio!"
