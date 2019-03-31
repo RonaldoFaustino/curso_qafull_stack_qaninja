@@ -19,7 +19,12 @@ Então("deve ser adicionado {int} unidade deste item") do |quantidade|
   puts "(#{quantidade}x) #{@produto_nome}"
 end
 
-Então("o valor deve ser de {string}") do |total|
+Então("o valor deve ser de {string}") do |valor_total|
    cart = find('#cart')
-   expect()
+   total = cart.find('tr',text: 'Total:').find('td')
+   expect(cart).to have_text valor_total
+   expect(total.text).to eql valor_total
+   #puts total.text
+   #puts valor_total
+   #jquery $('#cart tr:contains("Total:")');
 end
