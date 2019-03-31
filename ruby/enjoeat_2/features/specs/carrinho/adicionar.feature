@@ -1,17 +1,18 @@
 #language: pt
 
 @bread_bakery
-Funcionalidade: Adiconar ao carrinho
+Funcionalidade: Adicionar ao carrinho
     Para que eu possa finalizar uma compra
     Sendo um cliente que já decidiu o que deseja comer
     Possa adicionar itens ao meu carrinho
-
-    Cenario: Adionar 1 unidade
+    
+    @test1
+    Cenario: Adicionar 1 unidade
 
         Dado que o produto desejado é "Cup Cake"
         E o valor do produto é de "R$ 8,70"
         Quando eu adiciono 1 unidade
-        Então 1 unidade deste deve ser adicionada ao carrinho
+        Então deve ser adicionado 1 unidade deste item
         E o valor deve ser de "R$ 8,70"
 
     Cenario: Adicionar 2 unidades
