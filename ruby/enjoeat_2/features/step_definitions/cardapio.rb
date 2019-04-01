@@ -26,3 +26,11 @@ Quando("eu escolho um restaurante {string}") do |restaurante|
     expect(detail).to have_text infos['descricao']
     expect(detail).to have_text infos['horarios']
   end
+
+  Quando("eu adiciono {int} unidade \(s)") do |int|
+    
+  end
+  
+  Então("deve ser adicionado {int} unidade \(s) deste item") do |int|
+    
+  end
