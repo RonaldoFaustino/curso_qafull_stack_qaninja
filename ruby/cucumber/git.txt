@@ -1,0 +1,101 @@
+Instalar GIT
+
+$ git config --global user.name "Fulano da Silva"
+$ git config --global user.email fulanodasilva.git@gmail.com
+
+//Inicializar o Git
+$ git init
+
+//Verificar o status
+$ git status
+
+//Adicionar arquivo que não foi rastreado
+$ git add filmes.txt
+$ git add .
+
+//Gravar ou comitar arquivo -m para colocar mensagem de texto
+$ git commit -m "Arquivo inicial de citacoes"
+
+//Verificar alterações realizadas
+$ git log
+$ git log -n 2  => verifica os dois ultimos comits
+$ git log --oneline => verificação concisa
+$ git log --stat => verificação resumida
+$ git log -n 2 --oneline --stat
+
+//Adicionar projeto para GitHUb
+$ git remote add origin https://github.com/fulanodasilva/ citacoes.git
+
+//Enviar projeto para GitHUb
+$ git push origin master
+
+//Clonar Projeto GitHUb
+$ git clone https://github.com/fulanodasilva/citacoes.git
+
+//verificar o estado dos arquivos
+$ git log
+$ git log --oneline --decorate --parents
+
+//Criar um arquivo com extensão .gitignore
+.gitignore
+Mesmo o arquivo sendo ignorado é necessario executar git add .gitignore
+
+//Verificar as mudanças efetuadas
+$ git diff
+$ git diff --staged
+
+//Remover arquivo do stage
+$ git rm produtos.html
+
+//Renomear um arquivo
+$ git mv estilos.css principal.css
+
+//Mover arquivo para outro diretorio
+$ git mv principal.js js/principal.js
+
+//Desfazer mudanças
+$ git checkout -- index.html
+
+//Desfazendo mudanças já comitada
+$ git revert --no-edit 172691b
+
+//Criando repositorio Remoto servidor
+$ git init
+$ git init --bare moveis-ecologicos.git
+Oparâmetro --bareserveparaqueoGitnãocrieumworkingtree(diretóriodetrabalho),impedindoquecommitssejamefetuadosdiretamenteno servidor.Nonossocasofazsentido,jáqueoscommitsserãorealizadospelos
+
+//Adicionando Git
+$ git remote add
+
+//Listar repositórios
+$ git remote
+$ git remote -v  => para exibir a url
+
+//Renomeando repositorio
+$ git remote rename servidor outronome
+
+//Alterando endereço do repositório remoto
+$ git remote set-url servidor
+
+//Enviar commits para repositorio.
+$ git push servidor master
+A palavra master que utilizamos no comando anterior é o nome da branch principal do nosso repositório. Estudaremos branches com profundidademaisadiante.
+
+//Clonando repositorio.
+$ git clone file://192.168.10.99/opt/repositorios/ moveis-ecologicos.git
+
+//Sincronizando repositótio local com servidor
+$ git pull servidor master
+
+//Criar uma branch
+$ git branch design  => nome da branch
+$ git checkout -b loja => -b utilizado para criar nova branch e já ir para ela
+
+// Trocando de Branch
+$ git checkout design
+
+//Deletando branch
+$ git branch -d loja  => Não é possivel deletar uma branch dentro dela.
+
+//Dentro da Branch Master podemos
+$ git branch --no-merged
