@@ -14,7 +14,7 @@ Funcionalidade: Adicionar ao carrinho
         Quando eu adiciono 1 unidade(s)
         Então deve ser adicionado 1 unidade(s) deste item
         E o valor deve ser de "R$ 8,70"
-    @test1
+    
     Cenario: Adicionar 2 unidades
 
         Dado que o produto desejado é "Donut"
@@ -22,14 +22,14 @@ Funcionalidade: Adicionar ao carrinho
         Quando eu adiciono 2 unidade(s)
         Então deve ser adicionado 2 unidade(s) deste item
         E o valor deve ser de "R$ 5,00"
-
+    
     Cenario: Adicionar varios itens
 
         Dado que os produtos desejados são:
-            | nome | preco |
-            | Cup Cake | R$ 8,70 |
-            |  Donut | R$ 2,50 |
-            |  Pão Artesanal Italiano | R$ 15,90 |
+            | nome                   | preco    | quantidade |
+            | Cup Cake               | R$ 8,70  | 1           |
+            | Donut                  | R$ 2,50  | 2         |
+            | Pão Artesanal Italiano | R$ 15,90 | 3|
         Quando eu adiciono todos os itens 
-        Então vejotodos os itens no carrinho
-        E valor total deve ser de "R$ 27,10"
+        Então vejo todos os itens no carrinho
+        E o valor deve ser de "R$ 61,40"
