@@ -8,7 +8,7 @@
 
 
 Quando("acesso a lista de restaurantes") do
-	visit '/restaurants'
+	@rest_list_page.load
 end
 
 # Então("vejo todas as opções disponíveis") do
@@ -80,7 +80,7 @@ Dado("que temos os seguintes restaurantes") do |table|
   end
   
   Então("devo ver todos os restaurantes desta lista") do
-	restaurants = all('.col-sm-6')
+	restaurants = @rest_list_page.list
 
 	@restaurant_data.each_with_index do |value, index|
 		expect(restaurants[index]).to have_text value['nome'].upcase

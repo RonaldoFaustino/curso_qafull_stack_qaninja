@@ -14,21 +14,21 @@ Quando("eu adiciono {int} unidade\\(s)") do |quantidade|
 end
   
 Então("deve ser adicionado {int} unidade\\(s) deste item") do |quantidade|
-    cart = find('#shopping-cart')
+  #cart = find('#shopping-cart')
 
   #(1x) Cup Cake interpolação
-  expect(cart).to have_text "(#{quantidade}x) #{@produto_nome}"
+  expect(@cart_page.box).to have_text "(#{quantidade}x) #{@produto_nome}"
   puts "(#{quantidade}x) #{@produto_nome}"
 end
 
 Então("o valor deve ser de {string}") do |valor_total|
-   cart = find('#shopping-cart')
-   total = cart.find('tr',text: 'Total:').find('td')
-   expect(cart).to have_text valor_total
-   expect(total.text).to eql valor_total
-   #puts total.text
-   #puts valor_total
-   #jquery $('#cart tr:contains("Total:")');
+  #cart = find('#shopping-cart')
+  #total = @cart_page.box.find('tr',text: 'Total:').find('td')
+  #expect(@cart_page.box).to have_text valor_total
+  expect(@cart_page.total.text).to eql valor_total
+  #puts total.text
+  #puts valor_total
+  #jquery $('#cart tr:contains("Total:")');
 end
 
 #lista de produtos
@@ -46,10 +46,10 @@ Quando("eu adiciono todos os itens") do
 end
 
 Então("vejo todos os itens no carrinho") do
-  cart = find("#shopping-cart")
+  #cart = find("#shopping-cart")
   #quantidade = 1
   @product_list.each do |p|
-    expect(cart).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
+    expect(@cart_page.box).to have_text "(#{p["quantidade"]}x) #{p["nome"]}"
   end
 end
 
@@ -70,27 +70,27 @@ Dado("que eu tenho os seguintes itens no carrinho:") do |table|
 end
 
 Quando("eu removo somente o item {int}") do |item|
- #$('#cart table tbody tr')
- cart = find("#shopping-cart")
- cart.all("table tbody tr")[item].find(".danger").click
+  #$('#cart table tbody tr')
+  #cart = find("#shopping-cart")
+  @cart_page.remove_item(item)
 end
 
 Quando("eu removo somente o {int}") do |item|
- cart = find("#shopping-cart")
- cart.all("table tbody tr")[item].find(".danger").click
+  #cart = find("#shopping-cart")
+  @cart_page.remove_item(item)
 end
 
 Quando("eu removo todos os itens") do
   @product_list.each_with_index do |value,idx|
     #puts idx
-    cart = find("#shopping-cart")
-    cart.all("table tbody tr")[idx].find(".danger").click
+    #cart = find("#shopping-cart")
+    @cart_page.remove_item(idx)
   end
 end
 
 Então("vejo a seguinte mensagem no carrinho {string}") do |mensagem|
-  cart = find("#shopping-cart")
-  expect(cart).to have_text mensagem
+  #cart = find("#shopping-cart")
+  expect(@cart_page.box).to have_text mensagem
 end
 
 Quando("eu limpo meu carrinho") do
