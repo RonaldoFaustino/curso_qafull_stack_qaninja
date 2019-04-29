@@ -10,7 +10,7 @@ class RestaurantListPage
         all('.col-sm-6')
     end
 
-    def go(retaurant)
+    def go(restaurant)
         find('.restaurant-item', text: restaurant.upcase).click
     end
 end

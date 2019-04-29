@@ -7,7 +7,7 @@ Quando("eu escolho um restaurante {string}") do |restaurante|
   end
   
   Então("vejo os seguintes itens disponiveis no cardápio") do |table|
-    itens = @rest_page.menu
+    itens = @rest_page.menu_list
 
     product_data = table.hashes
 
