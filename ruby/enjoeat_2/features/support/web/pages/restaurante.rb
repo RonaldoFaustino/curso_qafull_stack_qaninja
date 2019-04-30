@@ -11,7 +11,7 @@ class RestaurantPage
     end
 
     def add_to_cart(nome)
-        find('.menu-item-info-box', text: nome.upcase).find('.add-to-cart').click
+        find('.menu-item-info-box', text: nome.upcase, wait: 15).find('.add-to-cart').click
     end
 
     def cart
