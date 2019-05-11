@@ -8,14 +8,16 @@ Dado("que eu fechei o pedido com os itens:") do |table|
 end
  
 Dado("informoei meus dados de entrega:") do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
+    user = table.rows_hash
+    #puts user
+    @order_page.fill_user_data(user)
+   
 end
   
-Quando("eu finalizo o pedido com {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Quando("eu finalizo o pedido com {string}") do |payment|
+    @order_page.finish(payment)
 end
   
-Então("devo ver a mensagem:") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+Então("devo ver a mensagem:") do |msg|
+    expect(@order_page.summary).to have_content msg
 end

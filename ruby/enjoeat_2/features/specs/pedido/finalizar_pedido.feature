@@ -31,7 +31,7 @@ Funcionalidade: Finalizar pedido
              | rua         | Avenida Pirajussara |
              | numero      | 1800                |
              | Complemento | casa                |
-        Quando eu finalizo o pedido com "Cartão refeição"
+        Quando eu finalizo o pedido com "Cartão Refeição"
         Então devo ver a mensagem:
         """
         Seu pedido foi recebido pelo restaurante. Prepare a mesa que a comida está chegando!

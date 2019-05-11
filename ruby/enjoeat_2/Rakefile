@@ -1,0 +1,20 @@
+require "time"
+
+task :hello do
+    puts "Hello Rake"
+end
+
+task :hello_name, [:nome] do |task, args|
+    puts "Hello" + args[:name]
+end
+
+task :specs, [:tags] do |taks, args|
+    time = Time.now.utc.iso8601.tr(":","")
+    #puts time
+    report = "--format html --out=log/report_#{time}.html"
+    #sh "cucumber --tag @pedido #{report}"
+    sh "cucumber #{args[:tags]} #{report}"
+    
+    #para executar usando tags // rake specs["--tag @smoke"]
+    #puts report
+end

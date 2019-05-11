@@ -12,3 +12,6 @@ Tabela não é necessario passar o tipo e não precisa simular varios usuarios
 
 hooks =>
 
+criar uma pasta log => para guarda relatorio html
+bundler exec cucumber --format html --out=log/report.html
+bundler exec cucumber --format html --out=log/report.html --format pretty
